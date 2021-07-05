@@ -12,7 +12,7 @@ function getBooksByCategory(category: BookTypes): string[] {
 // console.log(BookTypes[3]);
 // console.log(BookTypes[11]);
 
-console.log('Fiction books:', getBooksByCategory(BookTypes.Fiction));
-console.log('Biographies:', getBooksByCategory(BookTypes.Biography));
+console.log('Interfaces-Fiction books:', getBooksByCategory(BookTypes.Fiction));
+console.log('Interfaces-Biographies:', getBooksByCategory(BookTypes.Biography));
 
 
