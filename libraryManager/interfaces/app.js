@@ -10,6 +10,6 @@ function getBooksByCategory(category) {
 // console.log(BookTypes.History);
 // console.log(BookTypes[3]);
 // console.log(BookTypes[11]);
-console.log('Fiction books:', getBooksByCategory(constants_1.BookTypes.Fiction));
-console.log('Biographies:', getBooksByCategory(constants_1.BookTypes.Biography));
+console.log('Interfaces-Fiction books:', getBooksByCategory(constants_1.BookTypes.Fiction));
+console.log('Interfaces-Biographies:', getBooksByCategory(constants_1.BookTypes.Biography));
 //# sourceMappingURL=app.js.map
