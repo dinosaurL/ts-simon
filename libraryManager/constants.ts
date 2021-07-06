@@ -1,9 +1,15 @@
-enum BookTypes  {Biography = 3, Fiction = 8, History, Poetry = 4, 'Queer Studies' = 9}
+enum BookTypes  {Biography = 3, Fiction = 8, History, Poetry = 4, 'Self Help' = 9}
 
-const allBooks = [
+
+interface Books {
+    title: string,
+    category: BookTypes
+};
+
+const allBooks : Array<Books> = [
     {title : 'A Room with a View', category: BookTypes.Fiction},
-    {title : 'Maurice', category: BookTypes.Fiction},
-    {title : 'Howl', category: BookTypes['Queer Studies']},
+    {title : 'Maurice', category: 8},
+    {title : 'I\'m Ok, You\'re Ok', category: BookTypes['Self Help']},
     {title : 'Long Walk to freedom', category: BookTypes.Biography},
     {title : 'A Natural History of Ghosts', category: BookTypes.History}
 ];

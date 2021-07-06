@@ -1,10 +1,11 @@
 import { BookTypes, allBooks } from '../constants';
 
-function getBooksByCategory(category: BookTypes): string[] {
-    return allBooks.filter(b => b.category === category).map(b => b.title);
+function getBooksByCategory(selectedCategory: BookTypes): string[] {
 
-    //Following object-destructuring is not allowed: 
-    //return allBooks.filter(({category}) => category === category).map(({title}) => title);
+    //Following object-destructuring is allowed because of interface declaration in: 
+
+    return allBooks.filter(({category}) => category === selectedCategory).map(b => b.title);
+
 }
 
 // console.log(BookTypes.Poetry);
@@ -12,7 +13,7 @@ function getBooksByCategory(category: BookTypes): string[] {
 // console.log(BookTypes[3]);
 // console.log(BookTypes[11]);
 
-console.log('Interfaces-Fiction books:', getBooksByCategory(BookTypes.Fiction));
-console.log('Interfaces-Biographies:', getBooksByCategory(BookTypes.Biography));
+console.log('Fiction books:', getBooksByCategory(BookTypes.Fiction));
+console.log('Biographies:', getBooksByCategory(BookTypes.Biography));
 
 
