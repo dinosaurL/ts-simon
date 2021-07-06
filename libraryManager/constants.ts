@@ -1,17 +1,19 @@
 enum BookTypes  {Biography = 3, Fiction = 8, History, Poetry = 4, 'Self Help' = 9}
 
 
-interface Books {
+interface Book {
     title: string,
+    author: string,
+    pages?: number,
     category: BookTypes
 };
 
-const allBooks : Array<Books> = [
-    {title : 'A Room with a View', category: BookTypes.Fiction},
-    {title : 'Maurice', category: 8},
-    {title : 'I\'m Ok, You\'re Ok', category: BookTypes['Self Help']},
-    {title : 'Long Walk to freedom', category: BookTypes.Biography},
-    {title : 'A Natural History of Ghosts', category: BookTypes.History}
+const allBooks : Array<Book> = [
+    {title : 'A Room with a View', author: 'EM Forster', category: BookTypes.Fiction},
+    {title : 'Maurice', author: 'EM Forster', category: 8},
+    {title : 'I\'m Ok, You\'re Ok', author: 'Thomas Harris', category: BookTypes['Self Help']},
+    {title : 'Long Walk to freedom', author: 'Nelson Mandela', category: BookTypes.Biography},
+    {title : 'A Natural History of Ghosts', author: 'Roger Clarke', category: BookTypes.History}
 ];
 
-export { BookTypes, allBooks };
+export { BookTypes, Book, allBooks };

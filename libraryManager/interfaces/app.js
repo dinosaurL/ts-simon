@@ -1,17 +1,19 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var constants_1 = require("../constants");
-function getBooksByCategory(selectedCategory) {
+var getBooksByCategory = function (selectedCategory) {
     //Following object-destructuring is allowed because of interface declaration in: 
     return constants_1.allBooks.filter(function (_a) {
         var category = _a.category;
         return category === selectedCategory;
     }).map(function (b) { return b.title; });
-}
-// console.log(BookTypes.Poetry);
-// console.log(BookTypes.History);
-// console.log(BookTypes[3]);
-// console.log(BookTypes[11]);
+};
+var printBook = function (book) {
+    console.log("printing book - title: " + book.title);
+};
+var simonBook = { title: 'A Natural History of Ghosts', author: 'Roger Clarke', category: constants_1.BookTypes.History,
+    publisher: 'Penguin', rating: '5/5' };
 console.log('Fiction books:', getBooksByCategory(constants_1.BookTypes.Fiction));
 console.log('Biographies:', getBooksByCategory(constants_1.BookTypes.Biography));
-//# sourceMappingURL=app.js.map
+console.log('Biographies:', getBooksByCategory(constants_1.BookTypes.Biography));
+printBook(simonBook);
